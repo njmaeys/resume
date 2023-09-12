@@ -62,6 +62,9 @@
             border-bottom: 1px solid #18ba94;
             padding-bottom: 10px;
         }
+        .section li {
+            padding-bottom: 5px;
+        }
         .section p {
             margin: 0;
         }
@@ -77,49 +80,65 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Your Name</h1>
-            <p>Web Developer</p>
+            <h1>Nate Maeys</h1>
+            <p>Software Professional | Artist | Gamer</p>
             <div class="divider"></div> <!-- Divider line -->
         </div>
 
         <div class="content-container">
             <div class="sidebar">
                 <h2>Contact Information</h2>
-                <p style="color: #333;"><b>Email:</b> your.email@example.com</p>
-                <p style="color: #333;"><b>Phone:</b> (123) 456-7890</p>
-                <p style="color: #333;"><b>Website:</b> <a href="https://www.yourwebsite.com" target="_blank" style="color: #333; text-decoration: none;">www.yourwebsite.com</a></p>
+                <p style="color: #333;"><b>Email:</b> nmaeys@hotmail.com</p>
+                <p style="color: #333;"><b>Phone:</b> (573) 705-2108</p>
+                <p style="color: #333;"><b>Github:</b> <a href="https://github.com/njmaeys" target="_blank" style="color: #333; text-decoration: none;">github.com/njmaeys</a></p>
+                <p style="color: #333;"><b>Artist:</b> <a href="https://www.natemaeysfineart.com" target="_blank" style="color: #333; text-decoration: none;">natemaeysfineart.com</a></p>
                 <h2 class="skills">Skills</h2>
                 <ul>
-                    <li style="color: #333;">Web Development (HTML, CSS, JavaScript)</li>
-                    <li style="color: #333;">Programming Languages (Java, Python)</li>
+                    <li style="color: #333;">Leadership</li>
+                    <li style="color: #333;">Agile</li>
+                    <li style="color: #333;">Python</li>
+                    <li style="color: #333;">Go</li>
+                    <li style="color: #333;">AWS/GCP/Azure</li>
+                    <li style="color: #333;">Kubernetes</li>
+                    <li style="color: #333;">Docker</li>
+                    <li style="color: #333;">Bash</li>
+                    <li style="color: #333;">Terraform</li>
+                    <li style="color: #333;">CI CD</li>
                 </ul>
             </div>
 
             <div class="main-content">
                 <div class="section">
                     <h2>Summary</h2>
-                    <p>A brief summary of your skills, experience, and career goals.</p>
+                    <p>Technical professional experienced in building solutions that drive product and business growth. Brings strong technical proficiency in multiple coding languages and multiple cloud platforms. Emphasizes communication and partnership across departments to ensure alignment at all levels. Comfortable driving product growth and maintaining accountability in technical leadership roles.</p>
                 </div>
 
                 <div class="section">
                     <h2>Experience</h2>
-                    <p><strong>Job Title</strong> - Company Name<br>Duration: Month Year - Month Year</p>
+                    <p><strong>Mercury Broadband</strong> - <i>Kansas City, MO (Remote)<br>Senior Software Engineer<br><i>December 2022 - Present</i></p>
                     <ul>
-                        <li>Responsibility 1</li>
-                        <li>Responsibility 2</li>
-                        <li>Responsibility 3</li>
+                        <li>Created the initial proof of concept for the new API backend. The concepts were built as an AWS Lambda offering and as a FastAPI offering. I developed the proof of concept with infrastructure as code in mind, using Serverless for the lambda solution and the AWS CDK for the FastAPI solution. I lead the decision to use FastAPI.</li>
+                        <li>Created the AWS CDK deployments. We deploy our entire FastAPI application including things such as, ECS Cluster with tasks, ECR and containers, IAM policies, etc. This process has proven several times it's ease and usefulness in completely tearing down and re-deploying the entire application and supporting infrastructure rapidly and with confidence.</li>
+                        <li>Created the Bitbucket pipeline for our dev and prod releases. This runs our entire pytest suite in Bitbucket using the same setup that we use locally. This pipeline also runs our CDK deployments for dev and prod when merging to our respective dev and release branches</li>
+                        <li>I created a data factory pattern that is used to seed the initial test data into the local docker MySQL database. We are also able to use these same patterns to define the developer data in our AWS RDS instance. I defined the unit test patterns that interact directly with the local database. I defined the integration test patterns for our routes, including mocking database responses and testing error handling.</li>
                     </ul>
-                    <p><strong>Job Title</strong> - Company Name<br>Duration: Month Year - Month Year</p>
+                    <p><strong></strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
                     <ul>
-                        <li>Responsibility 1</li>
-                        <li>Responsibility 2</li>
-                        <li>Responsibility 3</li>
+                        <li>Responsibility</li>
+                    </ul>
+                    <p><strong>Senior Software Engineer</strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
+                    <ul>
+                        <li>Responsibility</li>
+                    </ul>
+                    <p><strong>Senior Software Engineer</strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
+                    <ul>
+                        <li>Responsibility</li>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2>Education</h2>
-                    <p><strong>University Name</strong> - Bachelor of Science in Computer Science<br>Graduation Year: 20XX</p>
+                    <p><strong>Lindenwood University</strong> - Bachelor of Arts - Psychology<br>Graduation Year: 2014</p>
                 </div>
             </div>
         </div>
