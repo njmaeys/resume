@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        p {
+            color: #333; /* Black text */
+            margin: 5px 0;
+        }
+        .divider {
+            border-top: 2px solid #ddd;
+            margin: 20px 0;
+        }
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .sidebar {
+            flex-basis: 30%;
+            background-color: #18ba94; /*  #59e3c3 Turquoise color */
+            color: #fff; /* White text */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .main-content {
+            flex-basis: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section {
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            background-color: #fff;
+        }
+        .section h2 {
+            color: #18ba94;
+            border-bottom: 1px solid #18ba94;
+            padding-bottom: 10px;
+        }
+        .section p {
+            margin: 0;
+        }
+        .skills {
+            font-weight: bold;
+        }
+        /* Align the top of Contact Information and Summary */
+        .sidebar h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Name</h1>
+            <p>Web Developer</p>
+            <div class="divider"></div> <!-- Divider line -->
+        </div>
+
+        <div class="content-container">
+            <div class="sidebar">
+                <h2>Contact Information</h2>
+                <p style="color: #333;"><b>Email:</b> your.email@example.com</p>
+                <p style="color: #333;"><b>Phone:</b> (123) 456-7890</p>
+                <p style="color: #333;"><b>Website:</b> <a href="https://www.yourwebsite.com" target="_blank" style="color: #333; text-decoration: none;">www.yourwebsite.com</a></p>
+                <h2 class="skills">Skills</h2>
+                <ul>
+                    <li style="color: #333;">Web Development (HTML, CSS, JavaScript)</li>
+                    <li style="color: #333;">Programming Languages (Java, Python)</li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <div class="section">
+                    <h2>Summary</h2>
+                    <p>A brief summary of your skills, experience, and career goals.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Experience</h2>
+                    <p><strong>Job Title</strong> - Company Name<br>Duration: Month Year - Month Year</p>
+                    <ul>
+                        <li>Responsibility 1</li>
+                        <li>Responsibility 2</li>
+                        <li>Responsibility 3</li>
+                    </ul>
+                    <p><strong>Job Title</strong> - Company Name<br>Duration: Month Year - Month Year</p>
+                    <ul>
+                        <li>Responsibility 1</li>
+                        <li>Responsibility 2</li>
+                        <li>Responsibility 3</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Education</h2>
+                    <p><strong>University Name</strong> - Bachelor of Science in Computer Science<br>Graduation Year: 20XX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
