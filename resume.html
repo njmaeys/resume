@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Resume</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
@@ -68,9 +69,6 @@
         .section p {
             margin: 0;
         }
-        .skills {
-            font-weight: bold;
-        }
         /* Align the top of Contact Information and Summary */
         .sidebar h2:first-child {
             margin-top: 0;
@@ -87,58 +85,94 @@
 
         <div class="content-container">
             <div class="sidebar">
-                <h2>Contact Information</h2>
-                <p style="color: #333;"><b>Email:</b> nmaeys@hotmail.com</p>
-                <p style="color: #333;"><b>Phone:</b> (573) 705-2108</p>
-                <p style="color: #333;"><b>Github:</b> <a href="https://github.com/njmaeys" target="_blank" style="color: #333; text-decoration: none;">github.com/njmaeys</a></p>
-                <p style="color: #333;"><b>Artist:</b> <a href="https://www.natemaeysfineart.com" target="_blank" style="color: #333; text-decoration: none;">natemaeysfineart.com</a></p>
-                <h2 class="skills">Skills</h2>
+                <h2>Contact</h2>
+                <p style="font-size: smaller;"><i class="fas fa-envelope"></i> nmaeys@hotmail.com</p>
+                <p style="font-size: smaller;"><i class="fas fa-phone"></i> (573) 705-2108</p>
+                <p style="font-size: smaller;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathan-maeys" target="_blank" style="color: #333; text-decoration: none;">linkedin.com/in/nathan-maeys</a></p>
+                <p style="font-size: smaller;"><i class="fab fa-github"></i> <a href="https://github.com/njmaeys" target="_blank" style="color: #333; text-decoration: none;">github.com/njmaeys</a></p>
+                <p style="font-size: smaller;"><i class="fas fa-paint-brush"></i> <a href="https://www.natemaeysfineart.com" target="_blank" style="color: #333; text-decoration: none;">natemaeysfineart.com</a></p>
+                
+                <h2>Skills</h2>
                 <ul>
                     <li style="color: #333;">Leadership</li>
+                    <li style="color: #333;">Product</li>
                     <li style="color: #333;">Agile</li>
                     <li style="color: #333;">Python</li>
                     <li style="color: #333;">Go</li>
                     <li style="color: #333;">AWS/GCP/Azure</li>
-                    <li style="color: #333;">Kubernetes</li>
+                    <li style="color: #334;">Kubernetes</li>
                     <li style="color: #333;">Docker</li>
                     <li style="color: #333;">Bash</li>
                     <li style="color: #333;">Terraform</li>
                     <li style="color: #333;">CI CD</li>
                 </ul>
+                <h2>Hobbies</h2>
+                <ul>
+                    <li style="color: #333;">Painting</li>
+                    <li style="color: #333;">Gaming</li>
+                    <li style="color: #333;">Dungeons and Dragons</li>
+                    <li style="color: #333;">Disc Golf</li>
+                    <li style="color: #333;">Craft Beer</li>
+                </ul>
+                <h2>Refrences</h2>
+                <p>Available upon request</p>
             </div>
 
             <div class="main-content">
                 <div class="section">
                     <h2>Summary</h2>
-                    <p>Technical professional experienced in building solutions that drive product and business growth. Brings strong technical proficiency in multiple coding languages and multiple cloud platforms. Emphasizes communication and partnership across departments to ensure alignment at all levels. Comfortable driving product growth and maintaining accountability in technical leadership roles.</p>
+                    <p>I'm a seasoned technical professional, adept at crafting solutions that propel both product innovation and business expansion. My expertise spans multiple programming languages and diverse cloud platforms, allowing me to seamlessly bridge the gap between technology and business objectives. I prioritize effective communication and foster collaborative partnerships across departments, ensuring alignment at every organizational level. My comfort in steering product growth and upholding technical leadership accountability underscores my commitment to delivering exceptional results.</p>
                 </div>
 
                 <div class="section">
                     <h2>Experience</h2>
-                    <p><strong>Mercury Broadband</strong> - <i>Kansas City, MO (Remote)<br>Senior Software Engineer<br><i>December 2022 - Present</i></p>
+                    <p><strong>Mercury Broadband</strong> - <i>Kansas City, MO (Remote)
+                    <br><strong style="color: #18ba94;">Senior Software Engineer</strong>
+                    <br><i>December 2022 - Present</i></p>
                     <ul>
                         <li>Created the initial proof of concept for the new API backend. The concepts were built as an AWS Lambda offering and as a FastAPI offering. I developed the proof of concept with infrastructure as code in mind, using Serverless for the lambda solution and the AWS CDK for the FastAPI solution. I lead the decision to use FastAPI.</li>
                         <li>Created the AWS CDK deployments. We deploy our entire FastAPI application including things such as, ECS Cluster with tasks, ECR and containers, IAM policies, etc. This process has proven several times it's ease and usefulness in completely tearing down and re-deploying the entire application and supporting infrastructure rapidly and with confidence.</li>
                         <li>Created the Bitbucket pipeline for our dev and prod releases. This runs our entire pytest suite in Bitbucket using the same setup that we use locally. This pipeline also runs our CDK deployments for dev and prod when merging to our respective dev and release branches</li>
                         <li>I created a data factory pattern that is used to seed the initial test data into the local docker MySQL database. We are also able to use these same patterns to define the developer data in our AWS RDS instance. I defined the unit test patterns that interact directly with the local database. I defined the integration test patterns for our routes, including mocking database responses and testing error handling.</li>
                     </ul>
-                    <p><strong></strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
+                    <p><strong>Recharge</strong> - <i>Santa Monica, CA (Remote)
+                    <br><strong style="color: #18ba94;">Engineering Manager</strong>
+                    <br><i>July 2022 - October 2022</i></p>
                     <ul>
-                        <li>Responsibility</li>
+                        <li>Led team through the Alpha release of the Recharge Memberships product offering.</li>
+                        <li>Worked closely with our Product Manager, Staff Engineer, and Principal Engineer to define the technical design and delivery timelines.</li>
+                        <li>Mentored and developed career plans with direct reports, providing feedback and coaching.</li>
+                        <li>Led scrum ceremonies and worked closely with our Project Manager to establish work for each sprint.</li>
                     </ul>
-                    <p><strong>Senior Software Engineer</strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
+                    <br><strong style="color: #18ba94;">Senior Software Engineer Backend</strong><br><i>December 2021 - July 2022</i></p>
                     <ul>
-                        <li>Responsibility</li>
+                        <li>Developed bi-directional asynchronous customer syncing system between Recharge and Shopify. Utilized GCP Pub/Sub for event creation and consumption. Implemented alerting and monitoring tools for the customer sync application. Launched gradual rollout across the Recharge merchants, monitoring alerts and overall load for smooth production launch.</li>
+                        <li>rote troubleshooting and technical docs for the customer sync application. Provided detailed transition presentation to the new maintaining team.</li>
+                        <li>Maintained and added new functionality to the existing Klaviyo integration for metric consumption and presentation. Wrote new and improved existing testing for this GCP Pub/Sub application.</li>
                     </ul>
-                    <p><strong>Senior Software Engineer</strong> - Mercury Broadband<br><i>Kansas City, MO (Remote)</i><br><i>December 2022 - Present</i></p>
+                    <p><strong>Cyderes</strong> - <i>Kansas City, MO (Hybrid)
+                    <br><strong style="color: #18ba94;">Cloud DevOps Engineer</strong>
+                    <br><i>July 2020 - September 2021</i></p>
                     <ul>
-                        <li>Responsibility</li>
+                        <li>Scripted our monthly maintenance process for automated Saltstack commands against client minions in python.</li>
+                        <li>Supported upgrading versions of Terraform and Kubernetes across our infrastructure. Managed manual EKS cluster upgrades and semi automated GKE cluster upgrades. Managed the monthly maintenance process of our client nodes to ensure linux upgrades were kept up to date and deployed.</li>
+                        <li>Scripted our client node provisioning process in python. Jenkins pipeline calls several operations along with pulling the provisioning process onto the node using the Saltstack API. The automated provisioning onboards new nodes into a Rancher cluster as either the Main node or Agent node(s) establishing the initial kubernetes cluster and initial Filebeat application for the cluster.</li>
+                    </ul>
+                    <p><strong>Veriship</strong> - <i>Kansas City, MO (Traditional)
+                    <br><strong style="color: #18ba94;">Software Engineer and Team Lead</strong>
+                    <br><i>March 2016 - July 2020</i></p>
+                    <ul>
+                        <li>Designed and implemented a streamlined simulation engine for internal contract simulation using EC2, AWS Lambda, Terraform, and Python (Pandas for DataFrame processing).</li>
+                        <li>Automated EC2 provisioning for streamlined simulation using Terraform and its UserData which pulls a custom Bash script from S3 to properly provision the EC2 instance. The provisioner script queries against AWS DynamoDB for production information and in turn pulls the proper cookbook artifacts onto the EC2 instance and executes the custom provisioner script.</li>
+                        <li>Develop and maintain enterprise level contract simulation engines using PySpark and EMR. The application pulls data from S3 and has roughly 20 steps submitted to the EMR cluster via Lambda functions. The application(s) process data via PySpark and store the information in HDFS while processing, then ultimately pushes the data, as Parquet, to S3. This application produces our monthly billing results.</li>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2>Education</h2>
-                    <p><strong>Lindenwood University</strong> - Bachelor of Arts - Psychology<br>Graduation Year: 2014</p>
+                    <p><strong>Lindenwood University</strong>
+                    <br>Bachelor of Arts - Psychology
+                    <br>Graduation Year: 2014</p>
                 </div>
             </div>
         </div>
