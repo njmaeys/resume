@@ -70,6 +70,7 @@
         }
         .section li {
             padding-bottom: 5px;
+            font-size: small;
         }
         .section p {
             margin: 0;
@@ -91,12 +92,16 @@
                 page-break-inside: avoid;
             }
 
-            /* Ensure the entire content is on one page */
-            .container {
-                page-break-before: auto;
-                page-break-after: auto;
+            /* Avoid page breaks inside <h2> elements within .main-content */
+            .main-content h2 {
+                page-break-inside: avoid;
+            }
+
+            .sidebar li {
+                page-break-inside: avoid;
             }
         }
+
     </style>
 </head>
 <body>
@@ -109,7 +114,7 @@
 
         <div class="section">
             <h2>Summary</h2>
-            <p>I'm a seasoned technical professional, adept at crafting solutions that propel both product innovation and business expansion. My expertise spans multiple programming languages and diverse cloud platforms, allowing me to seamlessly bridge the gap between technology and business objectives. I prioritize effective communication and foster collaborative partnerships across departments, ensuring alignment at every organizational level. My comfort in steering product growth and upholding technical leadership accountability underscores my commitment to delivering exceptional results.</p>
+            <p style="font-size: small;">I'm a seasoned technical professional, adept at crafting solutions that propel both product innovation and business expansion. My expertise spans multiple programming languages and diverse cloud platforms, allowing me to seamlessly bridge the gap between technology and business objectives. I prioritize effective communication and foster collaborative partnerships across departments, ensuring alignment at every organizational level. My comfort in steering product growth and upholding technical leadership accountability underscores my commitment to delivering exceptional results.</p>
         </div>
 
         <div class="content-container">
