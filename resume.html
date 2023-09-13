@@ -78,6 +78,25 @@
         .sidebar h2:first-child {
             margin-top: 0;
         }
+        @media print {
+            /* TODO: Figure this out a bit more to make sure it prints better*/
+
+            /* Avoid page breaks before and after elements */
+            body, html {
+                height: 100%;
+            }
+
+            /* Avoid page breaks inside elements */
+            .container {
+                page-break-inside: avoid;
+            }
+
+            /* Ensure the entire content is on one page */
+            .container {
+                page-break-before: auto;
+                page-break-after: auto;
+            }
+        }
     </style>
 </head>
 <body>
