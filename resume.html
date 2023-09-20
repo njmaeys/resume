@@ -6,6 +6,7 @@
     <title>Your Name - Resume</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat,Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
@@ -51,6 +52,12 @@
             box-sizing: border-box;
             border-radius: 5px;
         }
+        .sidebar li {
+            font-size: small;
+        }
+        .sidebar p {
+            font-size: small;
+        }
         .main-content {
             flex-basis: 70%;
             padding-left: 15px;
@@ -59,14 +66,14 @@
         .section {
             margin-bottom: 15px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 10px;
             background-color: #fff;
             border-radius: 5px;
         }
         .section h2 {
             color: #18ba94;
             border-bottom: 1px solid #18ba94;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
         .section li {
             padding-bottom: 5px;
@@ -80,25 +87,29 @@
             margin-top: 0;
         }
         @media print {
-            /* TODO: Figure this out a bit more to make sure it prints better*/
-
             /* Avoid page breaks before and after elements */
             body, html {
                 height: 100%;
+                background: #fff;
+                margin-bottom: 0;
             }
 
             /* Avoid page breaks inside elements */
-            .container {
+            .container ul {
                 page-break-inside: avoid;
             }
 
             /* Avoid page breaks inside <h2> elements within .main-content */
-            .main-content h2 {
+            .main-content ul {
                 page-break-inside: avoid;
             }
 
             .sidebar li {
                 page-break-inside: avoid;
+            }
+
+            h2.refrences {
+                page-break-before: always;
             }
         }
 
@@ -109,28 +120,26 @@
         <div class="header">
             <h1>Nate Maeys</h1>
             <p>Software Professional | Artist | Gamer</p>
-            <div class="divider"></div>
         </div>
 
         <div class="section">
             <h2>Summary</h2>
-            <p style="font-size: small;">I'm a seasoned technical professional, adept at crafting solutions that propel both product innovation and business expansion. My expertise spans multiple programming languages and diverse cloud platforms, allowing me to seamlessly bridge the gap between technology and business objectives. I prioritize effective communication and foster collaborative partnerships across departments, ensuring alignment at every organizational level. My comfort in steering product growth and upholding technical leadership accountability underscores my commitment to delivering exceptional results.</p>
+            <p style="font-size: small;">I'm an experienced technical professional skilled in driving product innovation, business growth, and effective communication. With expertise in various programming languages and cloud platforms, I bridge the gap between technology and business goals, fostering collaboration across departments.</p>
         </div>
 
         <div class="content-container">
             <div class="sidebar">
                 <h2>Contact</h2>
-                <p style="font-size: smaller;"><i class="fas fa-envelope"></i> nmaeys@hotmail.com</p>
-                <p style="font-size: smaller;"><i class="fas fa-phone"></i> (573) 705-2108</p>
-                <p style="font-size: smaller;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathan-maeys" target="_blank" style="color: #333; text-decoration: none;">linkedin.com/in/nathan-maeys</a></p>
-                <p style="font-size: smaller;"><i class="fab fa-github"></i> <a href="https://github.com/njmaeys" target="_blank" style="color: #333; text-decoration: none;">github.com/njmaeys</a></p>
-                <p style="font-size: smaller;"><i class="fas fa-paint-brush"></i> <a href="https://www.natemaeysfineart.com" target="_blank" style="color: #333; text-decoration: none;">natemaeysfineart.com</a></p>
+                <p><i class="fas fa-envelope"></i> nmaeys@hotmail.com</p>
+                <p><i class="fas fa-phone"></i> (573) 705-2108</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nathan-maeys" target="_blank" rel="noopener noreferrer" style="color: #333; text-decoration: none;">linkedin.com/in/nathan-maeys</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/njmaeys" target="_blank" rel="noopener noreferrer" style="color: #333; text-decoration: none;">github.com/njmaeys</a></p>
+                <p><i class="fas fa-paint-brush"></i> <a href="https://www.natemaeysfineart.com" target="_blank" rel="noopener noreferrer" style="color: #333; text-decoration: none;">natemaeysfineart.com</a></p>
                 
                 <h2>Skills</h2>
                 <ul>
                     <li style="color: #333;">Leadership</li>
                     <li style="color: #333;">Product</li>
-                    <li style="color: #333;">Agile</li>
                     <li style="color: #333;">Python</li>
                     <li style="color: #333;">Go</li>
                     <li style="color: #333;">AWS/GCP/Azure</li>
@@ -140,7 +149,8 @@
                     <li style="color: #333;">Terraform</li>
                     <li style="color: #333;">CI CD</li>
                 </ul>
-                <h2>Hobbies</h2>
+
+                <h2 class="hobbies">Hobbies</h2>
                 <ul>
                     <li style="color: #333;">Painting</li>
                     <li style="color: #333;">Gaming</li>
@@ -148,8 +158,12 @@
                     <li style="color: #333;">Disc Golf</li>
                     <li style="color: #333;">Craft Beer</li>
                 </ul>
-                <h2>Refrences</h2>
-                <p>Available upon request</p>
+                <h2>Education</h2>
+                <p style="font-size: smaller;"><i class="fas fa-graduation-cap"></i> <a href="https://www.lindenwood.edu/" target="_blank" rel="noopener noreferrer" style="color: #333; text-decoration: none;">Lindenwood University</a></p>
+                <ul>
+                    <li style="color: #333;">Psychology</li>
+                    <li style="color: #333;">Graduated 2014</li>
+                </ul>
             </div>
 
             <div class="main-content">
@@ -160,11 +174,14 @@
                     <br><strong style="color: #18ba94;">Senior Software Engineer</strong>
                     <br><i>December 2022 - Present</i></p>
                     <ul>
-                        <li>Created the initial proof of concept for the new API backend. The concepts were built as an AWS Lambda offering and as a FastAPI offering. I developed the proof of concept with infrastructure as code in mind, using Serverless for the lambda solution and the AWS CDK for the FastAPI solution. I lead the decision to use FastAPI.</li>
-                        <li>Created the AWS CDK deployments. We deploy our entire FastAPI application including things such as, ECS Cluster with tasks, ECR and containers, IAM policies, etc. This process has proven several times it's ease and usefulness in completely tearing down and re-deploying the entire application and supporting infrastructure rapidly and with confidence.</li>
-                        <li>Created the Bitbucket pipeline for our dev and prod releases. This runs our entire pytest suite in Bitbucket using the same setup that we use locally. This pipeline also runs our CDK deployments for dev and prod when merging to our respective dev and release branches</li>
-                        <li>I created a data factory pattern that is used to seed the initial test data into the local docker MySQL database. We are also able to use these same patterns to define the developer data in our AWS RDS instance. I defined the unit test patterns that interact directly with the local database. I defined the integration test patterns for our routes, including mocking database responses and testing error handling.</li>
+                        <li>Led the development of a new API backend, leveraging AWS Lambda and FastAPI.</li>
+                        <li>Implemented infrastructure as code (IAC) principles, using Serverless for Lambda and AWS CDK for FastAPI.</li>
+                        <li>Orchestrated AWS CDK deployments, ensuring a streamlined process for deploying the entire FastAPI application, including ECS clusters, ECR containers, IAM policies, and more.</li>
+                        <li>Developed robust unit test patterns for local database interactions and integration test patterns for route testing, incorporating mock database responses and robust error handling.</li>
+                        <li>Designed a data factory pattern for seeding initial test data into local Docker MySQL databases and AWS RDS instances.</li>
+                        <li>Established Bitbucket pipelines for both development and production releases, automating testing with pytest and CDK deployments upon code merges.</li>
                     </ul>
+
                     <p><strong>Recharge</strong> - <i>Santa Monica, CA (Remote)
                     <br><strong style="color: #18ba94;">Engineering Manager</strong>
                     <br><i>July 2022 - October 2022</i></p>
@@ -176,10 +193,12 @@
                     </ul>
                     <br><strong style="color: #18ba94;">Senior Software Engineer Backend</strong><br><i>December 2021 - July 2022</i></p>
                     <ul>
-                        <li>Developed bi-directional asynchronous customer syncing system between Recharge and Shopify. Utilized GCP Pub/Sub for event creation and consumption. Implemented alerting and monitoring tools for the customer sync application. Launched gradual rollout across the Recharge merchants, monitoring alerts and overall load for smooth production launch.</li>
-                        <li>rote troubleshooting and technical docs for the customer sync application. Provided detailed transition presentation to the new maintaining team.</li>
-                        <li>Maintained and added new functionality to the existing Klaviyo integration for metric consumption and presentation. Wrote new and improved existing testing for this GCP Pub/Sub application.</li>
+                        <li>Developed a robust, bi-directional asynchronous customer syncing system connecting Recharge with Shopify, enhancing data flow and real-time updates.</li>
+                        <li>Leveraged GCP Pub/Sub for event management, ensuring seamless data exchange and timely updates.</li>
+                        <li>Expanded the functionality of the existing Klaviyo integration, enhancing metric analysis and presentation.</li>
+                        <li>Revamped and extended testing processes for the GCP Pub/Sub application, improving reliability and error handling.</li>
                     </ul>
+
                     <p><strong>Cyderes</strong> - <i>Kansas City, MO (Hybrid)
                     <br><strong style="color: #18ba94;">Cloud DevOps Engineer</strong>
                     <br><i>July 2020 - September 2021</i></p>
@@ -188,22 +207,17 @@
                         <li>Supported upgrading versions of Terraform and Kubernetes across our infrastructure. Managed manual EKS cluster upgrades and semi automated GKE cluster upgrades. Managed the monthly maintenance process of our client nodes to ensure linux upgrades were kept up to date and deployed.</li>
                         <li>Scripted our client node provisioning process in python. Jenkins pipeline calls several operations along with pulling the provisioning process onto the node using the Saltstack API. The automated provisioning onboards new nodes into a Rancher cluster as either the Main node or Agent node(s) establishing the initial kubernetes cluster and initial Filebeat application for the cluster.</li>
                     </ul>
+
                     <p><strong>Veriship</strong> - <i>Kansas City, MO (Traditional)
                     <br><strong style="color: #18ba94;">Software Engineer and Team Lead</strong>
                     <br><i>March 2016 - July 2020</i></p>
                     <ul>
-                        <li>Designed and implemented a streamlined simulation engine for internal contract simulation using EC2, AWS Lambda, Terraform, and Python (Pandas for DataFrame processing).</li>
-                        <li>Automated EC2 provisioning for streamlined simulation using Terraform and its UserData which pulls a custom Bash script from S3 to properly provision the EC2 instance. The provisioner script queries against AWS DynamoDB for production information and in turn pulls the proper cookbook artifacts onto the EC2 instance and executes the custom provisioner script.</li>
-                        <li>Develop and maintain enterprise level contract simulation engines using PySpark and EMR. The application pulls data from S3 and has roughly 20 steps submitted to the EMR cluster via Lambda functions. The application(s) process data via PySpark and store the information in HDFS while processing, then ultimately pushes the data, as Parquet, to S3. This application produces our monthly billing results.</li>
+                        <li>Designed and implemented a streamlined contract simulation engine using EC2, AWS Lambda, Terraform, and Python (Pandas for DataFrame processing), optimizing internal contract simulations.</li>
+                        <li>Automated EC2 provisioning for simulations with Terraform and custom Bash scripts, fetching data from AWS DynamoDB for dynamic provisioning.</li>
+                        <li>Developed and maintained enterprise-level contract simulation engines using PySpark and EMR, processing data from S3 through Lambda functions and storing results in HDFS. The application also produced monthly billing results, improving efficiency.</li>
                     </ul>
                 </div>
 
-                <div class="section">
-                    <h2>Education</h2>
-                    <p><strong>Lindenwood University</strong>
-                    <br>Bachelor of Arts - Psychology
-                    <br>Graduation Year: 2014</p>
-                </div>
             </div>
         </div>
     </div>
